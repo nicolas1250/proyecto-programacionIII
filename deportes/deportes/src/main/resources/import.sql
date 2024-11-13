@@ -1,0 +1,3 @@
+INSERT INTO futbol (nombre, jugadores_por_equipos, duracion, popularidad_global, origen) VALUES ('Futbol', 11, 90, 'Alta', 'Inglaterra');
+INSERT INTO baloncesto (nombre, jugadores_por_equipos, duracion, popularidad_global, origen) VALUES ('Baloncesto', 5, 48, 'Alta', 'Estados Unidos');
+INSERT INTO tenis (nombre, jugadores_por_equipos, duracion, popularidad_global, origen) VALUES ('Tenis', 1, 90, 'Alta', 'Francia');

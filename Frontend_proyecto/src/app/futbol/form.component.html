@@ -1,0 +1,52 @@
+<div class="card bg-dark text-white">
+    <div class="card-header">
+        {{titulo}}
+    </div>
+    <div class="card-body">
+            <form>
+                <div class="form-group row">
+                    <label for=" nombre" class="col-form-label col-sm-2">Nombre de Futbol:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="futbol.nombre" name=" nombre">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="jugadoresPorEquipos" class="col-form-label col-sm-2">Jugadores por Equipos:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="futbol.jugadoresPorEquipos" name="jugadoresPorEquipos">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="duracion" class="col-form-label col-sm-2">Duracion:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="futbol.duracion" name="duracion">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="popularidadGlobal" class="col-form-label col-sm-2">Popularidad global:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="futbol.popularidadGlobal" name="popularidadGlobal">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="origen" class="col-form-label col-sm-2">Origen:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="futbol.origen" name="origen">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <button class="btn btn-primary" role="button" (click)='create()' *ngIf="!futbol.id else elseBlock">
+                            Crear
+                        </button>
+
+                        <ng-template #elseBlock>
+                            <button class="btn btn-primary" role="button" (click)='update()'>Editar</button>
+                        </ng-template>
+
+                    </div>
+                </div>
+            </form>
+    </div>
+</div>

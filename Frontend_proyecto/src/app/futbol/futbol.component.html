@@ -1,0 +1,47 @@
+<div class="card shadow-lg rounded-lg my-5">
+    <div class="card-header bg-primary text-white text-center">
+        <h4 class="m-0">Deportes</h4>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title text-center text-secondary mb-4">Listado de Futbol</h5>
+        <div style="text-align: center;">
+            <img src="https://img.freepik.com/fotos-premium/foto-estadio-futbol_643934-6593.jpg" alt="Descripción de la imagen" >
+        </div>
+        <div class="my-2 text-left">
+            <button class="btn btn-rounded btn-primary" type="button" [routerLink]="['/futbol/form']">Crear Futbol</button>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4" *ngFor="let indice of futbol">
+                <div class="card shadow-sm custom-card">
+                    <div class="card-body">
+                        <div style="text-align: center;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS06pEBeN0qaw3E_MFI0zfKj-wSzKxs7PeWeA&s" alt="Descripción de la imagen">
+                        </div>
+                        <h5 class="card-title">{{ indice.nombre }}</h5>
+                        <p class="card-text"><strong>Jugadores por equipos:</strong> {{ indice.jugadoresPorEquipos }}</p>
+                        <p class="card-text"><strong>Duración:</strong> {{ indice.duracion }}</p>
+                        <p class="card-text"><strong>Popularidad global:</strong> {{ indice.popularidadGlobal }}</p>
+                        <p class="card-text"><strong>Origen:</strong> {{ indice.origen }}</p>
+                        <th>Editar:</th>
+
+                        <td>
+                            <button type="button" name="editar" [routerLink]="['/futbol/form', indice.id]" class="btn btn-primary">Editar</button>
+                          </td>
+                          <th>Eliminar:</th>
+
+                          <td>
+                            <button type="button" name="eliminar" (click)="delete(indice)" class="btn btn-danger">Eliminar</button>
+                          </td>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ </div>
+ <h1>Video de YouTube</h1>
+ <div style="text-align: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RircTZnd3Zg?si=XJRG5Q5rcB8ayq1G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+ </div>
+  
+ 
